@@ -80,7 +80,7 @@ var myName="Varma";
             var a=0;
 
             while(a<=10){
-                console.log(a);
+                console.log('while ' + a);
                 a++;
             }
 
@@ -94,3 +94,23 @@ var myName="Varma";
             for(var c=0;c<=10;c++){
                 console.log(c)
             }
+
+            console.log(add(1,2));
+
+            //function declaration
+            function add(a,b){
+                return a+b;
+                console.log("dddd")
+            }
+            
+            //function expression
+            var sum=function(a,b){
+                return a+b;
+            }
+
+            console.log(sum(2,3))
+
+            //JavaScript Hoisting
+
+
+           
