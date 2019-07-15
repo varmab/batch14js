@@ -92,18 +92,39 @@ console.log(titles);
 // actor as value
 
 /*
-
     {
         "Bahubali":"Prabhas",
         "Adhurs":"NTR",
         "Kushi":"Pavan"
     }
-
 */
+
+var titleActors=movies.reduce(function(titleActors,movie){
+    titleActors[movie.title]=movie.actor;
+    return titleActors;
+},{})
+
+console.log(titleActors);
 
 //8. I want list of all theaters of all movies without any duplicates
 // ["A","B","C","D"]
+var allTheaters=movies.reduce(function(theaters,movie){
+    movie.theaters.forEach(function(theater){
+        if(theaters.includes(theater)==false){
+            theaters.push(theater);
+        }
+    })
+    return theaters;
+},[])
 
+console.log(allTheaters);
+
+
+movies.sort(function(a,b){
+    if(a.revenue>b.revenue) return 1;
+    if(a.revenue<b.revenue) return -1;
+    return 0;
+})
 
 
 

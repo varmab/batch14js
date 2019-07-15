@@ -112,5 +112,31 @@ var myName="Varma";
 
             //JavaScript Hoisting
 
+            var user={}
+
+            user.name="Varma";
+
+            user["age"]=46;
+
+            var key="college name";
+            user[key]="JNTU";
+
+            delete user.age;
+
+            var student=Object.assign({},user,teacher);
+
+
+            var professor={
+                name:"varma",
+                address:{
+                    street:"MIG 27/1",
+                    city:"Hyderabad"
+                }
+            }
+
+
+
+
+
 
            
